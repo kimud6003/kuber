@@ -1,9 +1,10 @@
 import Verification from "../../../entities/Verification";
- import {
+import {
    StartPhoneVerificationMutationArgs,
    StartPhoneVerificationResponse
  } from "../../../types/graph";
- import { Resolvers } from "../../../types/resolvers";
+import { Resolvers } from "../../../types/resolvers";
+import { sendVerificationSMS } from "../../../utils/sendSMS";
 
  const resolvers: Resolvers = {
    Mutation: {
@@ -23,6 +24,12 @@ import Verification from "../../../entities/Verification";
             payload: phoneNumber,
             target: "PHONE"
           }).save();
+          console.log(newVerification);
+          await sendVerificationSMS(newVerification.payload,newVerification.key);
+          return{
+            ok:true,
+            error:null
+          }
        } catch (error) {
          return {
            ok: false,

@@ -15,7 +15,6 @@ import { IsEmail } from "class-validator";
  import Chat from "./Chat";
  import Message from "./Message";
  import Ride from "./Ride";
- import Verification from "./Verification";
  
  const BCRYPT_ROUNDS = 10;
 

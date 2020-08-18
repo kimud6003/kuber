@@ -1,3 +1,19 @@
+type Verification {
+  id: Int!
+  target: String!
+  payload: String!
+  key: String!
+  createdAt: String!
+  updatedAt: String
+  id: Int!
+  target: String!
+  payload: String!
+  key: String!
+  used: Boolean!
+  createdAt: String!
+  updatedAt: String
+}
+
 type Chat {
   id: Int!
   messages: [Message]!
@@ -91,16 +107,6 @@ type User {
 
 type Query {
   user: User
-}
-
-type Verification {
-  id: Int!
-  target: String!
-  payload: String!
-  key: String!
-  used: Boolean!
-  createdAt: String!
-  updatedAt: String
 }
 
 type StartPhoneVerificationResponse {
