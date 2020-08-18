@@ -24,6 +24,9 @@ import {
     @Column({ type: "text" })
     key: string;
  
+    @Column({ type: "boolean", default: false })
+    verified: boolean;
+
     @CreateDateColumn() createdAt: string;
     @UpdateDateColumn() updatedAt: string;
 

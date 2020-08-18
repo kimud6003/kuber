@@ -46,7 +46,7 @@ import { IsEmail } from "class-validator";
    phoneNumber: string;
 
    @Column({ type: "boolean", default: false })
-   verifiedPhonenNumber: boolean;
+   verifiedPhoneNumber: boolean;
 
    @Column({ type: "text" })
    profilePhoto: string;
