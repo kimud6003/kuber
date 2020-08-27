@@ -1,4 +1,4 @@
-import { Between, getRepository } from "typeorm";
+import { Between, getRepository} from "typeorm";
 import Ride from "../../../entities/Ride";
 import User from "../../../entities/User";
 import { GetNearbyRideResponse } from "../../../types/graph";

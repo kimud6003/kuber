@@ -1,4 +1,3 @@
-  
 import cors from "cors";
 import { NextFunction, Response } from "express";
 import { GraphQLServer, PubSub } from "graphql-yoga";
